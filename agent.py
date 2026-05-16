@@ -1,12 +1,14 @@
 import os
 import logging
+from pathlib import Path
 from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_openai import ChatOpenAI
 
-# 加载环境变量配置
-load_dotenv()
+# 加载 agent.py 同级目录下的 .env 文件
+env_path = Path(__file__).parent / ".env"
+load_dotenv(dotenv_path=env_path)
 
 # 使用根日志记录器，确保使用与 app_flask.py 一致的日志配置
 logger = logging.getLogger(__name__)
