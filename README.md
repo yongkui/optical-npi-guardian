@@ -12,6 +12,12 @@
 - **预警推送模拟**：分析完成后自动发送预警通知，形成完整业务闭环。
 - **双模型支持**：可切换 DeepSeek API 或 Ollama 本地部署，灵活适配不同环境。
 
+## 📸 界面预览
+
+分析完成后，系统会展示风险仪表盘、详细报告及Agent思考链：
+
+![界面截图](docs/screenshot.png)
+
 ## 📊 系统架构
 
 ```mermaid
@@ -72,10 +78,13 @@ optical-npi-guardian/
 ├── agent.py               # LangChain Agent 定义、系统提示词
 ├── app_flask.py           # Flask Web 应用、前端模板、API 路由
 ├── tools.py               # Agent 工具函数
+├── utils.py               # 通用工具函数
 ├── sample_bom.csv         # 模拟的光模块 BOM 数据
 ├── reports/               # 生成的风险分析报告（HTML 格式）
+├── docs/                  # 项目文档和截图
 ├── requirements.txt       # Python 依赖
 ├── .env                   # 环境变量（需自行创建）
+├── .gitignore             # Git 忽略配置
 └── README.md
 ```
 
