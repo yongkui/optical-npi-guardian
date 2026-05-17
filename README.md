@@ -22,7 +22,7 @@
 
 ```mermaid
 graph TD
-    A[Flask Web 界面] -->|REST API| B[LangChain Agent]
+    A[Flask Web 界面] -->|1. 发起分析| B[LangChain Agent]
     B --> C[get_bom_data]
     B --> D[get_supplier_leadtime]
     B --> E[get_historical_risks]
@@ -30,6 +30,9 @@ graph TD
     C --> G[(sample_bom.csv)]
     D --> H[交期随机波动模拟]
     E --> I[历史风险库]
+    B -->|2. 返回报告| A
+    A --> J[📊 仪表盘 & 报告展示]
+    B -.->|3. 保存副本| K[(reports/ 目录)]
 ```
 
 ## 🛠 技术栈
