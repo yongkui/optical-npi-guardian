@@ -44,7 +44,7 @@ graph TD
 
 ### 1. 克隆仓库
 ```bash
-git clone https://github.com/你的用户名/optical-npi-guardian.git
+git clone https://github.com/yongkui/optical-npi-guardian.git
 cd optical-npi-guardian
 ```
 
